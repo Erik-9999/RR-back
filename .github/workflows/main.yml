@@ -1,0 +1,26 @@
+name: RR_back
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        extensions: mbstring, intl
+        ini-values: post_max_size=256M, upload_max_filesize=256M
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest --no-interaction
+
+    - name: Require duster
+      run: composer require tightenco/duster --dev
+
+    - name: Run linting
+      run: ./vendor/bin/duster fix
