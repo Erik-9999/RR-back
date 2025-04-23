@@ -41,27 +41,27 @@ git clone https://github.com/Erik-9999/RR-back.git
 Authentification
 Utilise Laravel Sanctum pour l’authentification via token.
 
-POST /api/register – Inscription
+- POST /api/register – Inscription
 
-POST /api/login – Connexion
+- POST /api/login – Connexion
 
-POST /api/logout – Déconnexion
+- POST /api/logout – Déconnexion
 
 Pour accéder aux routes protégées, ajouter ce header :
 Authorization: Bearer {token}
 
 Fonctionnalités principales
-Gestion des utilisateurs et des profils
+- Gestion des utilisateurs et des profils
 
-Création et gestion d'offres de services
+- Création et gestion d'offres de services
 
-Système de demandes et d'échanges
+- Système de demandes et d'échanges
 
-Notifications en temps réel (Pusher ou Laravel Echo)
+- Notifications en temps réel (Pusher ou Laravel Echo)
 
-Historique des transactions
+- Historique des transactions
 
-Système de notation et commentaires
+- Système de notation et commentaires
 
 Déploiement
 Prêt pour déploiement sur services Docker-ready (Heroku, AWS, etc.)
