@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  RR-back
 
 Backend du projet **RR** — une plateforme d'échange de services entre utilisateurs.  
