@@ -29,14 +29,14 @@ Prérequis
 Installation
 
 git clone https://github.com/Erik-9999/RR-back.git
-cd RR-back
-cp .env.example .env
-docker-compose up -d --build
-docker exec -it rr-back-app composer install
-docker exec -it rr-back-app php artisan key:generate
-docker exec -it rr-back-app php artisan migrate --seed
-docker exec -it rr-back-app npm install
-docker exec -it rr-back-app npm run dev
+- cd RR-back
+- cp .env.example .env
+- docker-compose up -d --build
+- docker exec -it rr-back-app composer install
+- docker exec -it rr-back-app php artisan key:generate
+- docker exec -it rr-back-app php artisan migrate --seed
+- docker exec -it rr-back-app npm install
+- docker exec -it rr-back-app npm run dev
 
 Authentification
 Utilise Laravel Sanctum pour l’authentification via token.
