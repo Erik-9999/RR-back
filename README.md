@@ -1,4 +1,77 @@
 <<<<<<< HEAD
+ RR-back
+
+Backend du projet **RR** — une plateforme d'échange de services entre utilisateurs.  
+Ce dépôt contient l'API RESTful développée avec Laravel, gérant l'authentification, la gestion des utilisateurs, les offres de services, les demandes, les notifications, etc.
+
+Stack technique
+
+- **Langage** : PHP 8
+- **Framework** : Laravel
+- **Base de données** : MySQL
+- **Conteneurisation** : Docker, Docker Compose
+- **Tests** : PHPUnit
+- **Gestion des assets** : Vite
+
+Structure du projet
+
+- `app/` : contrôleurs, modèles, middlewares, etc.
+- `routes/` : définition des routes API
+- `config/` : fichiers de configuration
+- `database/` : migrations, seeders et factories
+- `resources/` : vues Blade, assets front-end
+- `tests/` : tests unitaires et fonctionnels
+
+Prérequis
+
+- Docker et Docker Compose
+- Make (optionnel)
+
+Installation
+
+git clone https://github.com/Erik-9999/RR-back.git
+cd RR-back
+cp .env.example .env
+docker-compose up -d --build
+docker exec -it rr-back-app composer install
+docker exec -it rr-back-app php artisan key:generate
+docker exec -it rr-back-app php artisan migrate --seed
+docker exec -it rr-back-app npm install
+docker exec -it rr-back-app npm run dev
+
+Authentification
+Utilise Laravel Sanctum pour l’authentification via token.
+
+POST /api/register – Inscription
+
+POST /api/login – Connexion
+
+POST /api/logout – Déconnexion
+
+Pour accéder aux routes protégées, ajouter ce header :
+Authorization: Bearer {token}
+
+Fonctionnalités principales
+Gestion des utilisateurs et des profils
+
+Création et gestion d'offres de services
+
+Système de demandes et d'échanges
+
+Notifications en temps réel (Pusher ou Laravel Echo)
+
+Historique des transactions
+
+Système de notation et commentaires
+
+Déploiement
+Prêt pour déploiement sur services Docker-ready (Heroku, AWS, etc.)
+Fichiers Dockerfile et docker-compose.yaml inclus.
+
+📄 Licence
+Ce projet est sous licence MIT.
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
