@@ -67,7 +67,7 @@ Déploiement
 Prêt pour déploiement sur services Docker-ready (Heroku, AWS, etc.)
 Fichiers Dockerfile et docker-compose.yaml inclus.
 
-📄 Licence
+Licence
 Ce projet est sous licence MIT.
 
 
